@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #d9d9d9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 60vh;
+            width: 60vh;
+            background-color: cadetblue;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        label{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button{
+            width: 10vw;
+            height: 3vh;
+            border-radius: 3px;
+            background-color: #862d43;
+            color: white;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <form method="post">
+            <label>
+                <h3>Date: (YYYY-MM-DD)</h3>
+                <input type="text" name="date"/>
+            </label>
+            <label>
+                <h3>Country code: (Alpha-3code)</h3>
+                <input type="text" name="cc"/>
+            </label>
+            <label>
+                <h3>Period: (in days, 1-10)</h3>
+                <input type="number" name="period"/>
+            </label>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <h4>First:  {{ result1 }}</h4>
+    <h4>Second: {{ result2 }}</h4>
+    <h4>Mean:   {{ result_mean }}</h4>
+    <h4>Max increase in one day: {{ max_increase }}</h4>
+
+</body>
+</html>
